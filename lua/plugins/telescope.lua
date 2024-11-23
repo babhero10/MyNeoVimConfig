@@ -10,7 +10,7 @@ return {
           vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
           vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
           vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-          
+
           -- Additional key mapping for opening files and syncing with NeoTree
           vim.keymap.set('n', '<leader>fe', function()
               builtin.find_files({
@@ -28,12 +28,12 @@ return {
                   end
               })
           end, { desc = 'Telescope find files with NeoTree sync' })
-      end 
+      end
   },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-  }, 
+  },
   {
     'nvim-telescope/telescope-ui-select.nvim',
     config = function()
@@ -63,7 +63,7 @@ return {
       }
       -- To get ui-select loaded and working with telescope, you need to call
       -- load_extension, somewhere after setup function:
-      require("telescope").load_extension("ui-select")  
+      require("telescope").load_extension("ui-select")
     end
   }
 
